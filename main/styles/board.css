@@ -1,0 +1,665 @@
+/*The purplish colour is: #6E3258*/
+
+@font-face{
+	font-family:Poppins;
+	src:url('../fonts/Poppins/Poppins-Regular.ttf');
+}
+
+body{
+	background:transparent;
+	margin:0;
+	overflow-x:hidden;
+	font-family:Poppins, Tahoma, Geneva, sans-serif;
+}
+
+.container{
+	position:relative;
+	height:auto;
+	width:100%;
+	background:#F6F6F6;
+	overflow:hidden;
+}
+
+.container > div{
+	left:0;
+}
+
+/*TOP CONTAINER*/
+#header-image{
+	background:black;
+	height:70%;
+	overflow:hidden;
+	width:100%;
+	background-size:cover;
+	background-position:center;
+	border-bottom:3px solid #d6d6d6;
+}
+
+#profile-image{
+	background:#FFFFFF;
+	border:3px solid #d6d6d6;
+	height:20vw;
+	width:20vw;
+	border-radius:20vw;
+	margin-top:-10vw;
+	margin-left:10vw;
+	overflow:hidden;
+	background-size:cover;
+	background-position:center;
+}
+
+#header-image > img{
+	margin-top:70vh;
+	margin-left:90vw;
+	cursor:pointer;
+}
+
+#profile-image > img{
+	margin-top:75%;
+	margin-left:17vh;
+	cursor:pointer;
+}
+
+#fullname{
+	color:#65AEE0;
+	font-size:70px;
+	margin-left:35vw;
+	margin-top:-145px;
+}
+
+/*#view-birthday,#view-gifts{
+	cursor:pointer;
+}
+
+#view-birthday,#view-gifts,#profile-birthday{
+	display:inline-block;
+	background:#6E3258;
+	color:#FFFFFF;
+	border-radius:20px;
+	padding:5px;
+	margin-top:10px;
+	margin-left:7vw;
+	width:130px;
+	text-align:center;
+}*/
+
+
+#profile-birthday{
+	width:auto;
+	background:transparent;
+	color:#4CB1FF;
+	font-size:25px;
+	line-height:20px;
+	font-weight:bolder;
+}
+
+#profile-birthday > div{
+	font-size:15px;
+	color:#000000;
+}
+/*
+#profile-actions{
+	text-align:left;
+	margin-top:50px;
+	margin-bottom:100px;
+	margin-left:0;
+	width:100%;
+	display:inline-block;
+}
+
+.actionbutton{
+	display:inline-block;
+	cursor:pointer;
+	text-align:center;
+	justify-content:center;
+	margin-left:5%;
+	width:12%;
+	height:12%;
+}
+*/
+/*
+#profile-actions{
+	text-align:left;
+	margin-top:50px;
+	margin-bottom:100px;
+	margin-left:0;
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.actionbutton{
+	cursor:pointer;
+	margin-left:50px;
+	text-align:center;
+	width:125px;
+	height:125px;
+}
+*/
+#profile-actions{
+	text-align:left;
+	margin-top:50px;
+	margin-bottom:100px;
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	flex-wrap:nowrap;
+}
+
+.actionbutton{
+	cursor:pointer;
+	text-align:center;
+	width:14%;
+	height:200px;
+	margin:0 auto;
+}
+
+.actionbutton > img{
+	width:100%;
+	height:100%;
+}
+
+.actionbutton > span{
+	margin-top:-100px;
+	position:absolute;
+	margin-left:-50px;
+	word-wrap:break-word;
+	word-break:break-strict;
+}
+
+/*BOTTOM CONTAINER*/
+#bottom-container{
+	height:auto;
+	background:#F6F6F6;
+	border-top:3px solid #d6d6d6;
+}
+
+.comments{
+	position:relative;
+	background:#FFFFFF;
+	width:50%;
+	height:auto;
+	padding:5px;
+	margin-top:50px;
+	margin-bottom:50px;
+	margin-left:7vw;
+	box-shadow:0px 0px 2px 0px #000000;
+	z-index:1000;
+	border-radius:10px;
+}
+
+#comment-pointer{
+	position:absolute;
+	height:100%;
+	width:3px;
+	background:#d6d6d6;
+	margin-left:10vw;
+	top:0;
+	z-index:900;
+}
+
+.comment-profile{
+	position:relative;
+	height:70px;
+	width:70px;
+	border-radius:70px;
+	overflow:hidden;
+	background-size:cover;
+	background-position:center;
+}
+
+.comment-fullname,.comment-text,.comment-images{
+	background:#FFFFFF;
+	color:#000000;
+	font-size:20px;
+	margin-left:80px;
+	margin-top:-60px;
+	width:calc(100% - 80px);
+}
+
+.comment-text{
+	margin-top:15px;
+	font-size:15px;
+	line-height:15px;
+}
+
+.comment-images{
+	background:#f1f1f1;
+	margin-top:15px;
+	margin-bottom:15px;
+	display:flex;
+	flex-direction:row;
+	justify-content:left;
+	flex-wrap:wrap;
+}
+
+.comment-image{
+	background:#f9f9f9;
+	width:calc(calc(100% - 80px) / 3);
+	height:200px;
+	margin-left:20px;
+	margin-top:10px;
+	margin-bottom:10px;
+	background-size:cover;
+	background-position:center;
+	position:relative;
+}
+
+.comment-caption{
+	background:#000000;
+	color:#FFFFFF;
+	opacity:0;
+	position:absolute;
+	width:100%;
+	max-height:50%;
+	overflow:hidden;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-size:12px;
+	line-height:12px;
+	text-align:center;
+	bottom:0;
+}
+
+/*COMMENT BOX*/
+#comment-box{
+	position:relative;
+	background:#a6a6a6;
+	width:50%;
+	height:auto;
+	padding:5px;
+	margin-top:50px;
+	margin-left:7vw;
+	z-index:1000;
+}
+
+#addcomment{
+	width:calc(100% - 2.5px);
+	height:auto;
+	border:0;
+	overflow:hidden;
+	resize:none;
+}
+
+#entertosend,#comment-file-container,#send-button-container{
+	font-size:15px;
+	height:25px;
+	overflow:hidden;
+	background:#f6f6f6;
+	border-radius:5px;
+	padding:3px;
+	display:inline-block;
+}
+
+#comment-file-container{
+	background:transparent;
+	cursor:pointer;
+	right:70px;
+	position:absolute;
+}
+
+#send-button-container{
+	background:transparent;
+	border:0;
+}
+
+#send-button{
+	background:#FFF;
+	color:#000;
+	cursor:pointer;
+	padding:3px;
+	width:50px;
+	font-size:15px;
+	border:0;
+	right:10px;
+	position:absolute;
+}
+
+#selected-images{
+	position:absolute;
+	top:-500%;
+	left:0;
+	width:100%;
+	height:500%;
+	background:#a6a6a6;
+	z-index:1000;
+	display:none;
+	flex-direction:row;
+	justify-content:left;
+	flex-wrap:wrap;
+	overflow:auto;
+}
+
+#selected-images > img{
+	position:absolute;
+	top:5px;
+	right:5px;
+	cursor:pointer;
+}
+
+.selected-image{
+	background:#FFF;
+	border:1px solid #000;
+	margin-left:30px;
+	margin-top:30px;
+	width:calc(calc(100% - 100px) / 2);
+	height:calc(calc(100% - 100px) / 2);
+	position:relative;
+	background-size:cover;
+	background-position:center;
+}
+
+.selected-image > img{
+	position:absolute;
+	top:5px;
+	right:5px;
+	cursor:pointer;
+}
+
+.selected-image > .caption{
+	position:absolute;
+	background:#FFFFFF;
+	bottom:-1px;
+	left:-1px;
+	width:calc(100% - 2px);
+	border:0;
+	height:15px;
+	border:1px solid #000000;
+}
+
+#upload-error{
+	background:red;
+	display:none;
+	width:80%;
+	left:10%;
+	top:0;
+	position:absolute;
+	font-size:13px;
+	z-index:1000;
+}
+
+#header-upload-progress,#profile-upload-progress,#upload-progress{
+	width:100%;
+	height:100%;
+	opacity:0.5;
+	margin:0 auto;
+	display:none;
+	white-space:pre;
+	align-items:center;
+	justify-content:center;
+	font-size:35px;
+	z-index:1000;
+	background:#000000;
+	color:#FFFFFF;
+}
+
+#overlay{
+	background:#000000;
+	display:none;
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	opacity:0.5;
+	z-index:1100;
+}
+
+#create-birthday-modal,#give-gift-modal,#create-birthday-buzz-modal,#get-gift-modal,#calendar-modal{
+	position:fixed;
+	width:30%;
+	height:50%;
+	left:35%;
+	top:30%;
+	display:none;
+	background:#FFFFFF;
+	color:#000000;
+	z-index:1200;
+	border-radius:10px;
+}
+
+#create-birthday-modal,#create-birthday-buzz-modal{
+	height:25%;
+}
+
+.modal-notice{
+	display:none;
+	text-align:center;
+	align-items:center;
+	justify-content:center;
+	height:50px;
+	width:100%;
+	top:-50px;
+	left:0;
+	position:absolute;
+	background:green;
+}
+
+.label{
+	background:#6E3258;
+	color:#FFFFFF;
+	position:absolute;
+	left:20px;
+	padding:5px;
+	height:25px;
+}
+
+.close-modal{
+	position:absolute;
+	right:10px;
+	top:3px;
+	padding:5px;
+	cursor:pointer;
+}
+
+.form-functions{
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:35px;
+	left:0;
+	display:flex;
+	justify-content:center;
+	flex-wrap:wrap;
+	height:calc(100% - 35px);
+	background:#f6f6f6;
+}
+
+.form-functions > select{
+	width:30%;
+	margin-left:2%;
+	margin-top:15%;
+	height:35px;
+	font-size:15px;
+	border:2px solid #6E3258;
+}
+
+#create-birthday-buzz-input{
+	width:80%;
+	height:30px;
+	position:absolute;
+	left:10%;
+	margin-top:15%;
+	border:2px solid #6E3258;
+}
+
+#create-birthday-now,#create-birthday-buzz-now{
+	background:#6E3258;
+	color:#FFFFFF;
+	position:absolute;
+	padding:5px;
+	border:0;
+	right:10px;
+	bottom:10px;
+	font-size:15px;
+	cursor:pointer;
+}
+
+.form-functions-givegift{
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:67px;
+	left:0;
+	height:calc(100% - 65px);
+	overflow:auto;
+	background:#f6f6f6;
+}
+
+.form-functions-getgift{
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:37px;
+	left:0;
+	height:calc(100% - 35px);
+	overflow:auto;
+	background:#f6f6f6;
+}
+
+#send-gift-input{
+	position:absolute;
+	width:80%;
+	height:20px;
+	left:10%;
+	top:40px;
+	margin-bottom:100px;
+	border:2px solid #6E3258;
+}
+
+.gift-lists{
+	display:inline-block;
+	width:35px;
+	height:40px;
+	margin-left:2.5%;
+	margin-left:calc(calc(100% - 235px) / 7);
+	margin-top:10px;
+	border:2px solid #6E3258;
+	padding:5px;
+	border-radius:5px;
+	text-align:center;
+	position:relative;
+	overflow:hidden;
+}
+
+.sent-by-gift{
+	background:#6E3258;
+	color:#FFFFFF;
+	font-size:9px;
+	position:absolute;
+	left:0;
+	top:-2px;
+	white-space:pre;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.send-gift-list,.download-gift-list{
+	background:#6E3258;
+	color:#FFFFFF;
+	font-size:9px;
+	position:absolute;
+	padding-top:3px;
+	padding-left:3px;
+	bottom:0;
+	right:0;
+	cursor:pointer;
+}
+
+.form-functions-calendar{
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:35px;
+	left:0;
+	height:calc(100% - 35px);
+	background:#f6f6f6;
+	overflow:auto;
+}
+
+.calendar-name,.calendar-username,.calendar-date{
+	display:inline-block;
+	height:30px;
+	text-align:center;
+	background:#6E3258;
+	white-space:pre;
+	overflow:hidden;
+	width:29%;
+	margin-top:20px;
+	margin-left:1%;
+	margin-right:0;
+}
+
+.calendar-name{
+	margin-left:4%;
+}
+
+@media only screen and (max-width: 1024px) {
+	
+}
+
+@media only screen and (max-width: 768px) {
+	
+	#header-image{
+		height:50vh;
+		position:relative;
+	}
+	
+	#profile-image{
+		height:40vw;
+		width:40vw;
+		border-radius:40vw;
+		margin:0 auto;
+		margin-top:-20vw;
+		position:relative;
+	}
+
+	#header-image > img,#profile-image > img{
+		position:absolute;
+		left:0;
+		right:0;
+		bottom:0;
+		top:0;
+		margin:auto;
+	}
+	
+	#fullname{
+		margin-top:10px;
+		font-size:40px;
+		width:100%;
+		position:relative;
+		margin:0 auto;
+		display:block;
+		text-align:center;
+	}
+	
+	#profile-actions{
+		margin-top:0;
+		margin-bottom:10px;
+	}
+	
+	.comments,#comment-box{
+		margin-left:calc(5% - 2.5px);
+		width:calc(90% - 2.5px);
+	}
+	
+	#comment-pointer{
+		margin-left:calc(5% + 35px);
+	}
+	
+	.comment-image{
+		width: calc(calc(100% - 50px) / 2);
+	}
+	
+	.actionbutton{
+		height:70px;
+	}
+	
+	#create-birthday-modal,#give-gift-modal,#create-birthday-buzz-modal,#get-gift-modal,#calendar-modal{
+		width:90%;
+		left:5%;
+	}
+
+}

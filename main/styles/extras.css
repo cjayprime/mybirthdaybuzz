@@ -1,0 +1,84 @@
+/*The purplish colour is: #6E3258*/
+
+@font-face{
+	font-family:Poppins;
+	src:url('../fonts/Poppins/Poppins-Regular.ttf');
+}
+
+body{
+	background:#999;
+	margin:0;
+	width:100%;
+	overflow-x:hidden;
+	font-family:Poppins, Tahoma, Geneva, sans-serif;
+}
+
+body > div{
+	left:0
+}
+
+/*HEADER*/
+#header{
+	position:absolute;
+	top:0;
+	width:100%;
+	height:auto;
+	color:#FFFFFF;
+	text-align:center;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	z-index:1000;
+}
+
+#header > div{
+	margin-left:10%;
+	margin-top:25px;
+	font-weight:bolder;
+	color:#FFFFFF;
+	white-space:pre;
+}
+
+#header > div:first-child{
+	width:55px;
+	height:55px;
+	border-radius:55px;
+	background:#FFFFFF;
+	border:3px solid #6E3258;
+}
+
+#header > div:nth-child(2){
+	color:#6E3258;
+}
+
+#menu{
+	display:none;
+}
+
+a{
+	color:inherit;
+	text-decoration:none;
+}
+
+#background{
+	width:100%;
+	height:70vh;
+	box-shadow:0 0 7px 0;
+	background:#F3D0E4;
+	z-index:1000;
+}
+
+#container{
+	position:absolute;
+	top:100px;
+	width:70%;
+	height:auto;
+	margin-left:15%;
+	padding:10px;
+	background:#FFF;
+	z-index:1200;
+}
+
+h1{
+	color:#6E3258;
+}
